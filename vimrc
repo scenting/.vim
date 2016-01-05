@@ -129,12 +129,16 @@ let jshint2_save = 1
 " Python IDE Setup
 " ============================================================================
 
+" Enable sintax highlight
+let python_highlight_all=1
+
+" Run Flake8 after every save of python file
+autocmd BufWritePost *.py call Flake8()
 
 " Settings for vim-powerline
 " cd ~/.vim/bundle
 " git clone git://github.com/Lokaltog/vim-powerline.git
 set laststatus=2
-
 
 " Settings for ctrlp
 " cd ~/.vim/bundle

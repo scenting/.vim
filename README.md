@@ -14,5 +14,6 @@ $ ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 * [ctrlp.vim](https://github.com/kien/ctrlp.vim)
 * [jshint2.vim](https://github.com/Shutnik/jshint2.vim)
 * [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-* [python-mode](https://github.com/klen/python-mode)
-* [vim-powerline](https://github.com/Lokaltog/vim-powerline)
+* [vim-airline](https://github.com/bling/vim-airline)
+* [python-syntax](https://github.com/hdima/python-syntax)
+* [vim-flake8](https://github.com/nvie/vim-flake8)
