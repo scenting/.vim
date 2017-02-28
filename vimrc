@@ -113,36 +113,28 @@ set incsearch
 
 
 " Setup Pathogen to manage your plugins
-" mkdir -p ~/.vim/autoload ~/.vim/bundle
-" curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
-" Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
 
-" ============================================================================
-" JS IDE Setup
-" ============================================================================
+" ====================
+" Plugin Configuration
+" ====================
 
-" JSHint files after saving them
-let jshint2_save = 1
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" ============================================================================
-" Python IDE Setup
-" ============================================================================
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
-" Enable sintax highlight
-let python_highlight_all=1
+let g:syntastic_javascript_checkers = ['eslint']
 
-" Run Flake8 after every save of python file
-autocmd BufWritePost *.py call Flake8()
-
-" Settings for vim-powerline
-" cd ~/.vim/bundle
-" git clone git://github.com/Lokaltog/vim-powerline.git
+" vim-airline
 set laststatus=2
 
-" Settings for ctrlp
-" cd ~/.vim/bundle
-" git clone https://github.com/kien/ctrlp.vim.git
+" ctrlp
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 ""set wildignore+=*_build/*
